@@ -58,8 +58,16 @@ def get_kafka_consumer_group_id() -> str:
 # Set up data structures
 #####################################
 
-# Initialize a dictionary to store author counts
-author_counts = defaultdict(int)
+# Initialize a dictionary to store year, population, year counts, and average population
+year_list = defaultdict(int)        # for storing years
+population_list=defaultdict(int)    # for population
+year_count = defaultdict(int)      # for year counts   
+avg_population = defaultdict(float) # for average population
+
+years = []
+populations = []
+
+index = count()
 
 #####################################
 # Set up live visuals
@@ -81,29 +89,37 @@ plt.ion()
 #####################################
 
 
-def update_chart():
-    """Update the live chart with the latest author counts."""
+def update_chart(year, population):
+    """Update the live chart with the population data."""
+    years.append(year)
+    populations.append(population)
+    year_count[year] += 1
+    population_list[year] += population
+    avg_population[year] = population_list[year] / year_count[year]
+    
     # Clear the previous chart
     ax.clear()
 
-    # Get the authors and counts from the dictionary
-    authors_list = list(author_counts.keys())
-    counts_list = list(author_counts.values())
+    # Get the years and the population from the dictionary
+    #year_list = list(year_list.values())
+    #population_list = list(population_list.values())
+
 
     # Create a bar chart using the bar() method.
     # Pass in the x list, the y list, and the color
-    ax.bar(authors_list, counts_list, color="skyblue")
+    ax.plot(years, populations, label='Population', color="grey")
+    ax.plot(years, [avg_population[year] for year in years], labe='Average Population')
 
     # Use the built-in axes methods to set the labels and title
-    ax.set_xlabel("Authors")
-    ax.set_ylabel("Message Counts")
-    ax.set_title("Real-Time Author Message Counts")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Population")
+    ax.set_title("United States Population and Average Population Trend")
 
     # Use the set_xticklabels() method to rotate the x-axis labels
     # Pass in the x list, specify the rotation angle is 45 degrees,
     # and align them to the right
     # ha stands for horizontal alignment
-    ax.set_xticklabels(authors_list, rotation=45, ha="right")
+    ax.set_xticklabels(year_list, rotation=45, ha="right")
 
     # Use the tight_layout() method to automatically adjust the padding
     plt.tight_layout()
@@ -144,10 +160,11 @@ def process_message(message: str) -> None:
             logger.info(f"Message received from author: {author}")
 
             # Increment the count for the author
-            author_counts[author] += 1
+            year_count[years] += 1
+
 
             # Log the updated counts
-            logger.info(f"Updated author counts: {dict(author_counts)}")
+            logger.info(f"Updated author counts: {dict(year_count)}")
 
             # Update the chart
             update_chart()
