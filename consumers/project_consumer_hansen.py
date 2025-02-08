@@ -74,6 +74,7 @@ avg_population = defaultdict(float) # for average population
 
 years = []
 populations = []
+average_populations = []
 
 index = count()
 
@@ -101,16 +102,25 @@ def update_chart(year, population):
     """Update the live chart with the population data."""
     years.append(year)
     populations.append(population)
+
+    # Calculate the average population for the current year
     year_count[year] += 1
     population_list[year] += population
     avg_population[year] = population_list[year] / year_count[year]
+    average_populations.append(avg_population[year])
     
     # Clear the previous chart
     ax.clear()
 
-    # Create a line chart using the plot() method.
-    ax.plot(years, populations, label='Population', color="grey")
-    ax.plot(years, [avg_population[year] for year in years], label='Average Population')
+    # Sort the data by year
+    sorted_data = sorted(zip(years, populations, average_populations))
+    sorted_years, sorted_populations, sorted_avg_populations = zip(*sorted_data)
+
+    # Plot the population line
+    ax.plot(sorted_years, sorted_populations, label='Population', color="grey")
+
+    # Plot the average population line
+    ax.plot(sorted_years, sorted_avg_populations, label='Average Population', color="blue")
 
     # Use the built-in axes methods to set the labels and title
     ax.set_xlabel("Year")
@@ -121,8 +131,8 @@ def update_chart(year, population):
     # Pass in the x list, specify the rotation angle is 45 degrees,
     # and align them to the right
     # ha stands for horizontal alignment
-    ax.set_xticks(years)
-    ax.set_xticklabels(years, rotation=45, ha="right")
+    ax.set_xticks(sorted_years)
+    ax.set_xticklabels(sorted_years, rotation=45, ha="right")
 
     # Use the tight_layout() method to automatically adjust the padding
     plt.tight_layout()
@@ -131,13 +141,9 @@ def update_chart(year, population):
     plt.draw()
 
     # Pause briefly to allow some time for the chart to render
-    plt.pause(0.01)
+    plt.pause(0.75)
 
-# Print the results
-print("Year List:", dict(year_list))
-print("Population List:", dict(population_list))
-print("Year Count:", dict(year_count))
-print("Average Population:", dict)
+
 #####################################
 # Function to process a single message
 # #####################################
@@ -151,6 +157,15 @@ def process_message(message: str) -> None:
         message (str): The JSON message as a string.
     """
     try:
+        # Extract the year and population field from the Python dictionary
+        data = json.loads(message)
+        year = int(data['date'])
+        population = data['value']
+    
+        # Ensure population is an integer
+        if isinstance(population, list):
+            population = population[0] if population else 0
+
         # Log the raw message for debugging
         logger.debug(f"Raw message: {message}")
 
@@ -161,22 +176,16 @@ def process_message(message: str) -> None:
         logger.info(f"Processed JSON message: {message_dict}")
 
         # Ensure it's a dictionary before accessing fields
-        if isinstance(message_dict, dict):
-            # Extract the year and population field from the Python dictionary
-            data = json.loads(message)
-            year = int(data['date'])
-            population = data['value']
-        
-            if year and population:
-                year_list[year] = year
-                population_list[year] += population
-                year_count[year] += 1
+        if isinstance(year, int) and isinstance(population, int):
+            year_list[year] = year
+            population_list[year] += population
+            year_count[year] += 1
 
             # Log the updated counts
             logger.info(f"Updated year counts: {dict(year_count)}")
 
             # Update the chart
-            update_chart(year, populations)
+            update_chart(year, population)
 
             # Log the updated chart
             logger.info(f"Chart updated successfully for message: {message}")
@@ -187,6 +196,13 @@ def process_message(message: str) -> None:
         logger.error(f"Invalid JSON message: {message}")
     except Exception as e:
         logger.error(f"Error processing message: {e}")
+
+for message in messages:
+    process_message(message)
+
+# Calculate the average population after processing all messages
+for year in year_list:
+    avg_population[year] = population_list[year] / year_count[year]
 
 
 #####################################
