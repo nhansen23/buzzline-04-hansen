@@ -72,7 +72,7 @@ DATA_FOLDER: pathlib.Path = PROJECT_ROOT.joinpath("data")
 logger.info(f"Data folder: {DATA_FOLDER}")
 
 # Set the name of the data file
-DATA_FILE: pathlib.Path = DATA_FOLDER.joinpath("buzz.json")
+DATA_FILE: pathlib.Path = DATA_FOLDER.joinpath("project.json")
 logger.info(f"Data file: {DATA_FILE}")
 
 #####################################
@@ -99,13 +99,14 @@ def generate_messages(file_path: pathlib.Path):
                 # Load the JSON file as a list of dictionaries
                 json_data: list = json.load(json_file)
 
-                if not isinstance(json_data, list):
-                    raise ValueError(
-                        f"Expected a list of JSON objects, got {type(json_data)}."
-                    )
+                # Ensure the JSON data is valid and contains the expected structure
+                if not isinstance(json_data, list) or len(json_data) < 2 or not isinstance(json_data[1], list):
+                    raise ValueError(f"Unexpected JSON structure: {json_data}")
+
+                population_data = json_data[1]  # Assuming the array is at the second position
 
                 # Iterate over the entries in the JSON file
-                for buzz_entry in json_data:
+                for buzz_entry in population_data:
                     logger.debug(f"Generated JSON: {buzz_entry}")
                     yield buzz_entry
         except FileNotFoundError:
