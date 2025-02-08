@@ -15,6 +15,7 @@ JSON is a set of key:value pairs.
 import os
 import json  # handle JSON parsing
 from collections import defaultdict  # data structure for counting author occurrences
+from itertools import count
 
 # Import external packages
 from dotenv import load_dotenv
@@ -100,15 +101,9 @@ def update_chart(year, population):
     # Clear the previous chart
     ax.clear()
 
-    # Get the years and the population from the dictionary
-    #year_list = list(year_list.values())
-    #population_list = list(population_list.values())
-
-
-    # Create a bar chart using the bar() method.
-    # Pass in the x list, the y list, and the color
+    # Create a line chart using the plot() method.
     ax.plot(years, populations, label='Population', color="grey")
-    ax.plot(years, [avg_population[year] for year in years], labe='Average Population')
+    ax.plot(years, [avg_population[year] for year in years], label='Average Population')
 
     # Use the built-in axes methods to set the labels and title
     ax.set_xlabel("Year")
@@ -119,7 +114,8 @@ def update_chart(year, population):
     # Pass in the x list, specify the rotation angle is 45 degrees,
     # and align them to the right
     # ha stands for horizontal alignment
-    ax.set_xticklabels(year_list, rotation=45, ha="right")
+    ax.set_xticks(years)
+    ax.set_xticklabels(years, rotation=45, ha="right")
 
     # Use the tight_layout() method to automatically adjust the padding
     plt.tight_layout()
@@ -156,18 +152,18 @@ def process_message(message: str) -> None:
         # Ensure it's a dictionary before accessing fields
         if isinstance(message_dict, dict):
             # Extract the 'author' field from the Python dictionary
-            author = message_dict.get("author", "unknown")
-            logger.info(f"Message received from author: {author}")
+            year = message_dict.get("year",  2000)
+            logger.info(f"Message received for year {year} with population {populations}")
 
-            # Increment the count for the author
-            year_count[years] += 1
-
+            # Increment the count for the year
+            year_count[year] += 1
+            population_list[year] += populations
 
             # Log the updated counts
-            logger.info(f"Updated author counts: {dict(year_count)}")
+            logger.info(f"Updated year counts: {dict(year_count)}")
 
             # Update the chart
-            update_chart()
+            update_chart(year, populations)
 
             # Log the updated chart
             logger.info(f"Chart updated successfully for message: {message}")

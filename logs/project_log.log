@@ -1101,3 +1101,976 @@
 2025-02-08 08:08:26.312 | INFO     | __main__:process_message:144 - Message received from author: Bob
 2025-02-08 08:08:26.313 | INFO     | __main__:process_message:150 - Updated author counts: {'Eve': 20, 'Alice': 28, 'Charlie': 17, 'Diana': 31, 'Bob': 19}
 2025-02-08 08:08:26.401 | INFO     | __main__:process_message:156 - Chart updated successfully for message: {"message": "I love Python!", "author": "Bob"}
+2025-02-08 09:19:33.001 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-08 09:19:34.765 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-08 09:19:34.767 | INFO     | __main__:<module>:68 - Project root: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen
+2025-02-08 09:19:34.768 | INFO     | __main__:<module>:72 - Data folder: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen\data
+2025-02-08 09:19:34.768 | INFO     | __main__:<module>:76 - Data file: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen\data\buzz.json
+2025-02-08 09:19:34.768 | INFO     | __main__:main:136 - START producer.
+2025-02-08 09:19:34.768 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
+2025-02-08 09:19:34.772 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:79 - Zookeeper is ready at localhost:2181.
+2025-02-08 09:19:34.772 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-08 09:19:35.109 | INFO     | utils.utils_producer:check_kafka_service_is_ready:98 - Kafka is ready. Brokers: {'throttle_time_ms': 0, 'brokers': [{'node_id': 0, 'host': 'localhost', 'port': 9092, 'rack': None}], 'cluster_id': 'Kj-rNywaSsiq0uLa7PcYzQ', 'controller_id': 0}
+2025-02-08 09:19:35.110 | INFO     | __main__:get_kafka_topic:50 - Kafka topic: buzzline_json
+2025-02-08 09:19:35.111 | INFO     | __main__:get_message_interval:57 - Message interval: 3 seconds
+2025-02-08 09:19:35.112 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-08 09:19:35.112 | INFO     | utils.utils_producer:create_kafka_producer:146 - Connecting to Kafka broker at localhost:9092...
+2025-02-08 09:19:35.222 | INFO     | utils.utils_producer:create_kafka_producer:151 - Kafka producer successfully created.
+2025-02-08 09:19:35.223 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-08 09:19:35.554 | INFO     | utils.utils_producer:create_kafka_topic:172 - Topic 'buzzline_json' already exists. Clearing it out...
+2025-02-08 09:19:35.555 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-08 09:19:35.886 | ERROR    | utils.utils_producer:clear_kafka_topic:235 - Error managing retention for topic 'buzzline_json': list indices must be integers or slices, not ConfigResource
+2025-02-08 09:19:35.887 | INFO     | __main__:main:159 - Kafka topic 'buzzline_json' is ready.
+2025-02-08 09:19:35.888 | INFO     | __main__:main:165 - Starting message production to topic 'buzzline_json'...
+2025-02-08 09:19:35.888 | INFO     | __main__:generate_messages:95 - Opening data file in read mode: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen\data\buzz.json
+2025-02-08 09:19:35.889 | INFO     | __main__:generate_messages:97 - Reading data from file: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen\data\buzz.json
+2025-02-08 09:19:35.892 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:19:38.895 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Alice'}
+2025-02-08 09:19:41.897 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:19:44.899 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:19:47.903 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:19:50.905 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:19:53.907 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:19:56.909 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:19:59.913 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:20:02.918 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:20:05.925 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:20:08.933 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:20:11.937 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Charlie'}
+2025-02-08 09:20:14.943 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:20:17.948 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:20:20.954 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:20:23.959 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:20:26.962 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:20:29.966 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:20:32.969 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:20:35.971 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:20:38.975 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:20:41.976 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:20:44.979 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:20:47.981 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:20:50.984 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:20:53.986 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:20:56.987 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:20:59.988 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:21:02.990 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:21:05.992 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Charlie'}
+2025-02-08 09:21:08.994 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:21:12.000 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:21:15.003 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:21:16.057 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-08 09:21:16.176 | INFO     | __main__:main:197 - START consumer.
+2025-02-08 09:21:16.176 | INFO     | __main__:get_kafka_topic:47 - Kafka topic: buzzline_json
+2025-02-08 09:21:16.177 | INFO     | __main__:get_kafka_consumer_group_id:54 - Kafka consumer group id: buzz_group
+2025-02-08 09:21:16.177 | INFO     | __main__:main:202 - Consumer: Topic 'buzzline_json' and group 'buzz_group'...
+2025-02-08 09:21:16.177 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-08 09:21:16.177 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='buzzline_json' and group ID='buzz_group'.
+2025-02-08 09:21:16.288 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-08 09:21:16.289 | INFO     | __main__:main:208 - Polling messages from topic 'buzzline_json'...
+2025-02-08 09:21:16.608 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:21:16.608 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:21:16.608 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.608 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Alice'}
+2025-02-08 09:21:16.608 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:16.608 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.609 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:21:16.609 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:21:16.609 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.609 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:21:16.609 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:16.609 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.610 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:21:16.610 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.610 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.610 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:21:16.610 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:16.611 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.611 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:21:16.611 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.611 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.612 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:21:16.612 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:21:16.612 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.613 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:21:16.613 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:21:16.613 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.614 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:21:16.614 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:16.615 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.615 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:21:16.616 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.616 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.616 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:21:16.617 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.617 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.617 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Charlie'}
+2025-02-08 09:21:16.617 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:21:16.618 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.618 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:21:16.618 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:21:16.619 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.619 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:21:16.620 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:21:16.620 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.621 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:21:16.621 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:21:16.622 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.622 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:21:16.622 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:21:16.622 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.623 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:21:16.623 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:16.623 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.624 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:21:16.624 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:16.625 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.625 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:21:16.625 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.626 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.627 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:21:16.627 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:21:16.627 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.628 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:21:16.628 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:21:16.628 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.629 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:21:16.629 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:21:16.629 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.630 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:21:16.630 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:16.630 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.631 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:21:16.631 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.632 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.632 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:21:16.633 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.633 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.634 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:21:16.634 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:21:16.634 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.636 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:21:16.636 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.637 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.638 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:21:16.638 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.638 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.639 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:21:16.639 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:16.640 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.640 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Charlie'}
+2025-02-08 09:21:16.640 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:21:16.640 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.641 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:21:16.641 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.641 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.642 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:21:16.642 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:21:16.642 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:16.643 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:21:16.643 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:16.644 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:18.006 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Alice'}
+2025-02-08 09:21:18.011 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Alice'}
+2025-02-08 09:21:18.011 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:18.012 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:21.008 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:21:21.010 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:21:21.010 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:21.011 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:24.010 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Charlie'}
+2025-02-08 09:21:24.018 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Charlie'}
+2025-02-08 09:21:24.018 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:21:24.019 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:27.014 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-02-08 09:21:27.016 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-02-08 09:21:27.016 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:21:27.017 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:30.015 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:21:30.020 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:21:30.021 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:30.021 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:33.018 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:21:33.021 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:21:33.022 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:33.022 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:36.021 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Alice'}
+2025-02-08 09:21:36.026 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Alice'}
+2025-02-08 09:21:36.027 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:36.027 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:39.023 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Charlie'}
+2025-02-08 09:21:39.026 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Charlie'}
+2025-02-08 09:21:39.027 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:21:39.027 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:42.025 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:21:42.028 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:21:42.029 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:42.029 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:45.028 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:21:45.030 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:21:45.030 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:45.031 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:48.030 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:21:48.033 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:21:48.033 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:21:48.033 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:51.031 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:21:51.037 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:21:51.037 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:21:51.037 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:54.037 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Bob'}
+2025-02-08 09:21:54.039 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Bob'}
+2025-02-08 09:21:54.041 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:21:54.041 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:21:57.040 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:21:57.042 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:21:57.042 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:21:57.042 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:00.040 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:22:00.044 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:22:00.045 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:22:00.045 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:03.042 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:22:03.046 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:22:03.046 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:22:03.046 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:06.045 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:22:06.049 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:22:06.049 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:22:06.050 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:09.047 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:22:09.053 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:22:09.054 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:22:09.054 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:12.049 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-02-08 09:22:12.052 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-02-08 09:22:12.052 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:22:12.052 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:15.051 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:22:15.056 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:22:15.057 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:22:15.058 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:18.052 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:22:18.055 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:22:18.055 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:22:18.055 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:21.055 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:22:21.058 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:22:21.060 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:22:21.060 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:24.058 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:22:24.062 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:22:24.062 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:22:24.063 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:27.060 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Bob'}
+2025-02-08 09:22:27.063 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Bob'}
+2025-02-08 09:22:27.064 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:22:27.064 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:30.062 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:22:30.067 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:22:30.067 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:22:30.068 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:33.063 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:22:33.067 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:22:33.068 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:22:33.068 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:36.067 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:22:36.071 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:22:36.071 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:22:36.072 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:39.070 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:22:39.074 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:22:39.074 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:22:39.075 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:42.072 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Diana'}
+2025-02-08 09:22:42.077 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Diana'}
+2025-02-08 09:22:42.077 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:22:42.077 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:45.077 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Bob'}
+2025-02-08 09:22:45.082 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Bob'}
+2025-02-08 09:22:45.082 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:22:45.082 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:48.084 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:22:48.087 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:22:48.088 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:22:48.088 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:51.087 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:22:51.093 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:22:51.093 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:22:51.094 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:54.088 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Eve'}
+2025-02-08 09:22:54.092 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Eve'}
+2025-02-08 09:22:54.092 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:22:54.092 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:22:57.090 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:22:57.093 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:22:57.093 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:22:57.093 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:00.092 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Charlie'}
+2025-02-08 09:23:00.097 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Charlie'}
+2025-02-08 09:23:00.097 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:23:00.098 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:03.094 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:23:03.096 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:23:03.096 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:23:03.097 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:06.095 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:23:06.099 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:23:06.100 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:23:06.100 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:09.097 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:23:09.101 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:23:09.101 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:23:09.102 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:12.099 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Bob'}
+2025-02-08 09:23:12.103 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Bob'}
+2025-02-08 09:23:12.103 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:23:12.103 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:15.102 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:23:15.104 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:23:15.106 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:23:15.106 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:18.104 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:23:18.106 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:23:18.106 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:23:18.106 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:21.106 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Charlie'}
+2025-02-08 09:23:21.108 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Charlie'}
+2025-02-08 09:23:21.108 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:23:21.108 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:24.109 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Charlie'}
+2025-02-08 09:23:24.111 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Charlie'}
+2025-02-08 09:23:24.111 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:23:24.112 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:27.110 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:23:27.112 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:23:27.113 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:23:27.113 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:30.111 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:23:30.114 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:23:30.114 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:23:30.116 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:33.113 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:23:33.116 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:23:33.116 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:23:33.116 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:36.115 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Eve'}
+2025-02-08 09:23:36.119 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Eve'}
+2025-02-08 09:23:36.119 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:23:36.119 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:39.118 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:23:39.233 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:23:39.233 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:23:39.233 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:42.119 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:23:42.122 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:23:42.123 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:23:42.123 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:45.122 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:23:45.123 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:23:45.124 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:23:45.124 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:48.123 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:23:48.126 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:23:48.126 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:23:48.126 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:51.124 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:23:51.126 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:23:51.127 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:23:51.127 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:54.125 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:23:54.127 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:23:54.127 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:23:54.128 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:23:57.126 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:23:57.129 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:23:57.129 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:23:57.129 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:00.128 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-02-08 09:24:00.131 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-02-08 09:24:00.131 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:24:00.131 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:03.129 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:24:03.132 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:24:03.133 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:24:03.133 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:06.132 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:24:06.135 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:24:06.135 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:24:06.135 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:09.135 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Diana'}
+2025-02-08 09:24:09.143 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Diana'}
+2025-02-08 09:24:09.144 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:24:09.145 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:12.137 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:24:12.140 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:24:12.140 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:24:12.140 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:15.139 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Charlie'}
+2025-02-08 09:24:15.142 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Charlie'}
+2025-02-08 09:24:15.142 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:24:15.142 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:18.141 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-02-08 09:24:18.146 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-02-08 09:24:18.146 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:24:18.147 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:21.144 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:24:21.146 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:24:21.146 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:24:21.147 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:24.145 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:24:24.148 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:24:24.148 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:24:24.148 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:27.147 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:24:27.152 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:24:27.152 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:24:27.152 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:30.148 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Diana'}
+2025-02-08 09:24:30.152 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Diana'}
+2025-02-08 09:24:30.152 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:24:30.153 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:33.151 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:24:33.153 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:24:33.153 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:24:33.153 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:36.152 | INFO     | __main__:generate_messages:95 - Opening data file in read mode: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen\data\buzz.json
+2025-02-08 09:24:36.152 | INFO     | __main__:generate_messages:97 - Reading data from file: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen\data\buzz.json
+2025-02-08 09:24:36.154 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:24:36.157 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:24:36.157 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:24:36.157 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:39.156 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Alice'}
+2025-02-08 09:24:39.160 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Alice'}
+2025-02-08 09:24:39.161 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:24:39.161 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:42.158 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:24:42.162 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:24:42.163 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:24:42.163 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:45.161 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:24:45.163 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:24:45.163 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:24:45.163 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:48.162 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:24:48.166 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:24:48.166 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:24:48.166 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:51.165 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:24:51.166 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:24:51.167 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:24:51.167 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:54.166 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:24:54.169 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:24:54.169 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:24:54.170 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:24:57.167 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:24:57.172 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:24:57.173 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:24:57.173 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:00.170 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:25:00.172 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:25:00.172 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:25:00.173 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:03.172 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:25:03.176 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:25:03.176 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:25:03.176 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:06.175 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:25:06.177 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:25:06.177 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:25:06.177 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:09.176 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:25:09.179 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:25:09.179 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:25:09.179 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:12.179 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Charlie'}
+2025-02-08 09:25:12.181 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Charlie'}
+2025-02-08 09:25:12.182 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:25:12.182 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:15.179 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:25:15.186 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:25:15.186 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:25:15.187 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:18.183 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:25:18.186 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:25:18.186 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:25:18.186 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:21.185 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:25:21.189 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:25:21.189 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:25:21.190 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:24.186 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:25:24.190 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:25:24.192 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:25:24.192 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:27.189 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:25:27.191 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:25:27.191 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:25:27.192 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:30.190 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:25:30.194 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:25:30.195 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:25:30.195 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:33.193 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:25:33.196 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:25:33.196 | INFO     | __main__:process_message:161 - Message received from author: Diana
+2025-02-08 09:25:33.197 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:36.195 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:25:36.198 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:25:36.198 | INFO     | __main__:process_message:161 - Message received from author: Eve
+2025-02-08 09:25:36.198 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:39.197 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:25:39.200 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:25:39.201 | INFO     | __main__:process_message:161 - Message received from author: Charlie
+2025-02-08 09:25:39.201 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:42.199 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:25:42.203 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:25:42.203 | INFO     | __main__:process_message:161 - Message received from author: Bob
+2025-02-08 09:25:42.203 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:45.201 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:25:45.205 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:25:45.205 | INFO     | __main__:process_message:161 - Message received from author: Alice
+2025-02-08 09:25:45.205 | ERROR    | __main__:process_message:181 - Error processing message: unhashable type: 'list'
+2025-02-08 09:25:48.203 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:25:51.205 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:25:54.209 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:25:57.209 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:26:00.212 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:26:03.213 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:26:06.215 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Charlie'}
+2025-02-08 09:26:09.218 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:26:12.219 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:26:15.221 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:26:18.223 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Alice'}
+2025-02-08 09:26:21.225 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:26:24.228 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Charlie'}
+2025-02-08 09:26:27.229 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-02-08 09:26:30.234 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:26:33.239 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:26:36.243 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Alice'}
+2025-02-08 09:26:39.248 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Charlie'}
+2025-02-08 09:26:42.257 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:26:45.261 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:26:48.267 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:26:51.272 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:26:54.274 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Bob'}
+2025-02-08 09:26:57.276 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:26:57.727 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-08 09:26:57.836 | INFO     | __main__:main:197 - START consumer.
+2025-02-08 09:26:57.837 | INFO     | __main__:get_kafka_topic:47 - Kafka topic: buzzline_json
+2025-02-08 09:26:57.837 | INFO     | __main__:get_kafka_consumer_group_id:54 - Kafka consumer group id: buzz_group
+2025-02-08 09:26:57.838 | INFO     | __main__:main:202 - Consumer: Topic 'buzzline_json' and group 'buzz_group'...
+2025-02-08 09:26:57.838 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-08 09:26:57.838 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='buzzline_json' and group ID='buzz_group'.
+2025-02-08 09:26:57.951 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-08 09:26:57.952 | INFO     | __main__:main:208 - Polling messages from topic 'buzzline_json'...
+2025-02-08 09:26:58.277 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:26:58.277 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.278 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.278 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:26:58.279 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.279 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.280 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:26:58.280 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.280 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.280 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:26:58.280 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.281 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.281 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:26:58.282 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.282 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.282 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:26:58.282 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.282 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.284 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Charlie'}
+2025-02-08 09:26:58.284 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.284 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.284 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:26:58.285 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.285 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.285 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:26:58.285 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.285 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.285 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:26:58.286 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.286 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.286 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Alice'}
+2025-02-08 09:26:58.288 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.288 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.289 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:26:58.289 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.289 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.290 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Charlie'}
+2025-02-08 09:26:58.290 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.290 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.291 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-02-08 09:26:58.291 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.291 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.292 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:26:58.292 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.293 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.293 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:26:58.294 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.294 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.294 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Alice'}
+2025-02-08 09:26:58.294 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.294 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.295 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Charlie'}
+2025-02-08 09:26:58.295 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.295 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.296 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:26:58.296 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.296 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.296 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:26:58.297 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.297 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.297 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:26:58.297 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.297 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.298 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:26:58.298 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.299 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.299 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Bob'}
+2025-02-08 09:26:58.300 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.300 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:26:58.300 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:26:58.300 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:26:58.300 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:00.279 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:27:00.288 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:27:00.288 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:00.289 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:03.283 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:27:03.288 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:27:03.289 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:03.290 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:06.286 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:27:06.295 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:27:06.295 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:06.296 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:09.291 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:27:09.297 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:27:09.298 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:09.299 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:12.295 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-02-08 09:27:12.299 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-02-08 09:27:12.300 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:12.300 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:15.297 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:27:15.300 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:27:15.301 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:15.301 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:18.301 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:27:18.308 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:27:18.308 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:18.309 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:21.305 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:27:21.310 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:27:21.311 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:21.311 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:24.309 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:27:24.315 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:27:24.315 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:24.316 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:27.312 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Bob'}
+2025-02-08 09:27:27.320 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Bob'}
+2025-02-08 09:27:27.320 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:27.322 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:30.315 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:27:30.318 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:27:30.319 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:30.319 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:33.317 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:27:33.322 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:27:33.323 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:33.324 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:36.319 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:27:36.324 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:27:36.324 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:36.325 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:39.322 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:27:39.327 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:27:39.328 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:39.328 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:42.325 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Diana'}
+2025-02-08 09:27:42.329 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Diana'}
+2025-02-08 09:27:42.330 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:42.330 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:45.328 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Bob'}
+2025-02-08 09:27:45.330 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Bob'}
+2025-02-08 09:27:45.330 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:45.331 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:48.329 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:27:48.332 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:27:48.333 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:48.333 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:51.331 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:27:51.336 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-02-08 09:27:51.336 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:51.336 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:54.337 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Eve'}
+2025-02-08 09:27:54.340 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Eve'}
+2025-02-08 09:27:54.341 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:54.341 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:27:57.341 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:27:57.343 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-02-08 09:27:57.344 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:27:57.344 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:00.343 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Charlie'}
+2025-02-08 09:28:00.346 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Charlie'}
+2025-02-08 09:28:00.348 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:00.348 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:03.347 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:28:03.353 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:28:03.353 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:03.354 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:06.351 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:28:06.354 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Alice'}
+2025-02-08 09:28:06.355 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:06.355 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:09.355 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:28:09.361 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:28:09.361 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:09.362 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:12.358 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Bob'}
+2025-02-08 09:28:12.363 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Bob'}
+2025-02-08 09:28:12.363 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:12.364 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:15.360 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:28:15.363 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:28:15.363 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:15.363 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:18.362 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:28:18.367 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:28:18.368 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:18.368 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:21.365 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Charlie'}
+2025-02-08 09:28:21.368 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Charlie'}
+2025-02-08 09:28:21.369 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:21.369 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:24.368 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Charlie'}
+2025-02-08 09:28:24.373 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Charlie'}
+2025-02-08 09:28:24.375 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:24.375 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:27.373 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:28:27.378 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:28:27.379 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:27.379 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:30.377 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:28:30.380 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-02-08 09:28:30.380 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:30.380 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:33.379 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:28:33.385 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:28:33.385 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:33.386 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:36.382 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Eve'}
+2025-02-08 09:28:36.386 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Eve'}
+2025-02-08 09:28:36.386 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:36.387 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:39.386 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:28:39.393 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:28:39.393 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:39.394 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:42.390 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:28:42.396 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:28:42.396 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:42.397 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:45.393 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:28:45.398 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:28:45.398 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:45.399 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:48.397 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:28:48.404 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:28:48.406 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:48.406 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:51.401 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:28:51.407 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:28:51.408 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:51.409 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:54.404 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:28:54.410 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:28:54.411 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:54.411 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:28:57.409 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:28:57.416 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:28:57.417 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:28:57.417 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:00.414 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-02-08 09:29:00.420 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-02-08 09:29:00.421 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:00.422 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:03.421 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:29:03.427 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:29:03.427 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:03.427 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:06.425 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:29:06.430 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:29:06.430 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:06.431 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:09.428 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Diana'}
+2025-02-08 09:29:09.434 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Diana'}
+2025-02-08 09:29:09.434 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:09.434 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:12.432 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:29:12.438 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Charlie'}
+2025-02-08 09:29:12.438 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:12.439 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:15.435 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Charlie'}
+2025-02-08 09:29:15.438 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Charlie'}
+2025-02-08 09:29:15.438 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:15.438 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:18.437 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-02-08 09:29:18.444 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-02-08 09:29:18.445 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:18.445 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:21.441 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:29:21.450 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:29:21.451 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:21.451 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:24.446 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:29:24.452 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:29:24.453 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:24.453 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:27.450 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:29:27.453 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:29:27.454 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:27.454 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:30.452 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Diana'}
+2025-02-08 09:29:30.458 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Diana'}
+2025-02-08 09:29:30.458 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:30.459 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:33.454 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:29:33.457 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:29:33.457 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:33.457 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:36.456 | INFO     | __main__:generate_messages:95 - Opening data file in read mode: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen\data\buzz.json
+2025-02-08 09:29:36.456 | INFO     | __main__:generate_messages:97 - Reading data from file: C:\Users\Nicole\Documents\streamingData\module04\buzzline-04-hansen\data\buzz.json
+2025-02-08 09:29:36.458 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:29:36.462 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Eve'}
+2025-02-08 09:29:36.462 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:36.463 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:39.462 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Alice'}
+2025-02-08 09:29:39.465 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Alice'}
+2025-02-08 09:29:39.465 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:39.465 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:42.464 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:29:42.469 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Charlie'}
+2025-02-08 09:29:42.469 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:42.470 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:45.466 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:29:45.469 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:29:45.469 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:45.469 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:48.469 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:29:48.474 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:29:48.475 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:48.475 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:51.473 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:29:51.481 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:29:51.482 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:51.483 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:54.478 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:29:54.481 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Diana'}
+2025-02-08 09:29:54.482 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:54.482 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:29:57.479 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:29:57.483 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:29:57.484 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:29:57.484 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:00.484 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:30:00.487 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Eve'}
+2025-02-08 09:30:00.487 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:00.487 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:03.486 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:30:03.491 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Alice'}
+2025-02-08 09:30:03.492 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:03.492 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:06.490 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:30:06.497 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:30:06.498 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:06.499 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:09.493 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:30:09.497 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:30:09.498 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:09.498 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:12.497 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Charlie'}
+2025-02-08 09:30:12.503 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Charlie'}
+2025-02-08 09:30:12.504 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:12.504 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:15.501 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:30:15.507 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-02-08 09:30:15.508 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:15.509 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:18.504 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:30:18.510 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Bob'}
+2025-02-08 09:30:18.510 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:18.511 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:21.508 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:30:21.515 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Eve'}
+2025-02-08 09:30:21.516 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:21.516 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:24.511 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:30:24.515 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:30:24.516 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:24.516 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:27.514 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:30:27.516 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Alice'}
+2025-02-08 09:30:27.517 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:27.517 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:30.517 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:30:30.525 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Alice'}
+2025-02-08 09:30:30.525 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:30.526 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:33.522 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:30:33.527 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Diana'}
+2025-02-08 09:30:33.527 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:33.528 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:36.528 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:30:36.533 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Eve'}
+2025-02-08 09:30:36.534 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:36.534 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:39.531 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:30:39.537 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Charlie'}
+2025-02-08 09:30:39.538 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:39.538 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:42.535 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:30:42.539 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Bob'}
+2025-02-08 09:30:42.541 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:42.541 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:45.538 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:30:45.547 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Data engineering is my passion.', 'author': 'Alice'}
+2025-02-08 09:30:45.547 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:45.547 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:48.541 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:30:48.546 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:30:48.546 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:48.547 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:51.545 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:30:51.550 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-02-08 09:30:51.551 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:51.551 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:54.553 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:30:54.559 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Bob'}
+2025-02-08 09:30:54.559 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:54.559 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:30:57.557 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:30:57.563 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Distributed systems are fascinating.', 'author': 'Diana'}
+2025-02-08 09:30:57.563 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:30:57.564 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:31:00.561 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:31:00.567 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'I love Python!', 'author': 'Diana'}
+2025-02-08 09:31:00.568 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:31:00.568 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:31:03.566 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:31:03.574 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Have a great day!', 'author': 'Alice'}
+2025-02-08 09:31:03.574 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:31:03.575 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:31:06.570 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Hello, Kafka world!', 'author': 'Charlie'}
+2025-02-08 09:31:06.573 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'Hello, Kafka world!', 'author': 'Charlie'}
+2025-02-08 09:31:06.574 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:31:06.574 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
+2025-02-08 09:31:09.571 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:31:09.575 | INFO     | __main__:process_message:155 - Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Diana'}
+2025-02-08 09:31:09.575 | INFO     | __main__:process_message:161 - Message received for year 2000 with population []
+2025-02-08 09:31:09.575 | ERROR    | __main__:process_message:181 - Error processing message: unsupported operand type(s) for +=: 'int' and 'list'
