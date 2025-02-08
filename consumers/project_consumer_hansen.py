@@ -59,6 +59,13 @@ def get_kafka_consumer_group_id() -> str:
 # Set up data structures
 #####################################
 
+# Sample JSON messages
+messages = [
+    '{"indicator": {"id": "SP.POP.TOTL", "value": "Population, total"}, "country": {"id": "US", "value": "United States"}, "countryiso3code": "USA", "date": "2020", "value": 331526933, "unit": "", "obs_status": "", "decimal": 0}',
+    '{"indicator": {"id": "SP.POP.TOTL", "value": "Population, total"}, "country": {"id": "US", "value": "United States"}, "countryiso3code": "USA", "date": "2019", "value": 328329953, "unit": "", "obs_status": "", "decimal": 0}',
+    '{"indicator": {"id": "SP.POP.TOTL", "value": "Population, total"}, "country": {"id": "US", "value": "United States"}, "countryiso3code": "USA", "date": "2018", "value": 326838199, "unit": "", "obs_status": "", "decimal": 0}'
+]
+
 # Initialize a dictionary to store year, population, year counts, and average population
 year_list = defaultdict(int)        # for storing years
 population_list=defaultdict(int)    # for population
@@ -126,7 +133,11 @@ def update_chart(year, population):
     # Pause briefly to allow some time for the chart to render
     plt.pause(0.01)
 
-
+# Print the results
+print("Year List:", dict(year_list))
+print("Population List:", dict(population_list))
+print("Year Count:", dict(year_count))
+print("Average Population:", dict)
 #####################################
 # Function to process a single message
 # #####################################
@@ -151,13 +162,15 @@ def process_message(message: str) -> None:
 
         # Ensure it's a dictionary before accessing fields
         if isinstance(message_dict, dict):
-            # Extract the 'author' field from the Python dictionary
-            year = message_dict.get("year",  2000)
-            logger.info(f"Message received for year {year} with population {populations}")
-
-            # Increment the count for the year
-            year_count[year] += 1
-            population_list[year] += populations
+            # Extract the year and population field from the Python dictionary
+            data = json.loads(message)
+            year = int(data['date'])
+            population = data['value']
+        
+            if year and population:
+                year_list[year] = year
+                population_list[year] += population
+                year_count[year] += 1
 
             # Log the updated counts
             logger.info(f"Updated year counts: {dict(year_count)}")
